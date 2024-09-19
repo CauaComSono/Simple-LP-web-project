@@ -5,8 +5,8 @@ import Close from "../assets/close.svg";
 import Menu from "../assets/menu.svg"
 import Button from "../components/Button";
 import {useEffect, useState } from "react";
-import HeroRectangleOne from "../assets/images/rectangleOne.png";
-import HeroRectangleTwo from "../assets/images/rectangleTwo.png";
+import HeroRectangleOne from "../assets/images/RectangleOne.png";
+import HeroRectangleTwo from "../assets/images/RectangleTwo.png";
 import "../styles/hero.css";
 import "../styles/solution.css"
 import Card from "../components/Card";
