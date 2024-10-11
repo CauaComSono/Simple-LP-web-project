@@ -148,6 +148,29 @@ return (
 
             </div>
         </section>
+
+        <section id="testimonials">
+            <header>
+                <span>
+                    <p className="desktop-only">
+                        Conselho de quem conhece
+                    </p>
+                    <h2>
+                        Cada visita importa!
+                    </h2>
+                </span>
+                <p>
+                    AAAAAAAAA
+                </p>
+            </header>
+            <section className="carousel">
+                <div className="carousel-content">
+                    <div>
+                        
+                    </div>
+                </div>
+            </section>
+        </section>
     </>
 )
 }
