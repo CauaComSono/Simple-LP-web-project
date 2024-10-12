@@ -4,12 +4,13 @@ import Logo from "../assets/logo.svg";
 import Close from "../assets/close.svg";
 import Menu from "../assets/menu.svg"
 import Button from "../components/Button";
+import Card from "../components/Card";
 import {useEffect, useState } from "react";
 import HeroRectangleOne from "../assets/images/RectangleOne.png";
 import HeroRectangleTwo from "../assets/images/RectangleTwo.png";
 import "../styles/hero.css";
 import "../styles/solution.css"
-import Card from "../components/Card";
+import "../styles/tetimonials.css"
 
 export default function Home() {
 
@@ -166,8 +167,10 @@ return (
             <section className="carousel">
                 <div className="carousel-content">
                     <div>
-                        
+
                     </div>
+                </div>
+                <div className="carousel-content">
                 </div>
             </section>
         </section>
