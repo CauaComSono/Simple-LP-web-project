@@ -3,14 +3,20 @@ import "../styles/header.css";
 import Logo from "../assets/logo.svg";
 import Close from "../assets/close.svg";
 import Menu from "../assets/menu.svg"
+import Check from "../assets/check.svg";
 import Button from "../components/Button";
 import Card from "../components/Card";
+import TestimonialCard from "../components/TestimonialCard";
 import {useEffect, useState } from "react";
 import HeroRectangleOne from "../assets/images/RectangleOne.png";
 import HeroRectangleTwo from "../assets/images/RectangleTwo.png";
+import RyanGosling from "..//assets/images/RyanGosling.jpg";
+import Tangerina from "../assets/images/Tangerina.jpg";
+import BradPitt from "../assets/images/BradPitt.jpg"
+import AnaDeArmas from "../assets/images/AnaArmas.jpg"
 import "../styles/hero.css";
 import "../styles/solution.css"
-import "../styles/tetimonials.css"
+import "../styles/pricing.css"
 
 export default function Home() {
 
@@ -161,19 +167,126 @@ return (
                     </h2>
                 </span>
                 <p>
-                    AAAAAAAAA
+                    Está com duvida se o nosso zoológico realmente tem todas essas atrações? Veja o conselho de quem já nos visitou e aprovou!
                 </p>
             </header>
             <section className="carousel">
                 <div className="carousel-content">
-                    <div>
+                  
+                        <TestimonialCard
+                        comentary="Visitar o Foozoo foi incrível para nossa família! As crianças adoraram os animais e as atrações interativas. O dia todo foi divertido, e a área de alimentação tem ótimas opções. Voltaremos com certeza!"
+                        urlProfileImage={RyanGosling}
+                        starNumber={5}
+                        nameCostumer="Ryan Gosling"
+                        ocupationCostumer="Motorista"    
+                        />
+                        
+                        <TestimonialCard
+                        comentary="Eu amei o Foozoo! Cada parte é cheia de vida e as apresentações são emocionantes e educativas. O cuidado com os animais é admirável. Um lugar mágico para aprender e se divertir!"
+                        urlProfileImage={Tangerina}
+                        starNumber={4}
+                        nameCostumer="Aaron Taylor"
+                        ocupationCostumer="Advogado"
+                        />
 
-                    </div>
+                        <TestimonialCard
+                        comentary="O Foozoo é perfeito para quem busca aventura! As trilhas e experiências com os animais são fantásticas. A adrenalina do arvorismo foi o ponto alto do dia. Recomendo para todos!"
+                        urlProfileImage={BradPitt}
+                        starNumber={5}
+                        nameCostumer="Brad Pitt"
+                        ocupationCostumer="Vendedor de sabonetes"    
+                        />
+
+                        <TestimonialCard
+                        comentary="Como amante da natureza, o Foozoo foi uma grande aula sobre conservação. As iniciativas de preservação são inspiradoras e as palestras educativas são muito informativas. Parabéns à equipe!"
+                        urlProfileImage={AnaDeArmas}
+                        starNumber={5}
+                        nameCostumer="Ana de Armas"
+                        ocupationCostumer="Policial"    
+                        />
+
                 </div>
                 <div className="carousel-content">
+
+                        <TestimonialCard
+                        comentary="Visitar o Foozoo foi incrível para nossa família! As crianças adoraram os animais e as atrações interativas. O dia todo foi divertido, e a área de alimentação tem ótimas opções. Voltaremos com certeza!"
+                        urlProfileImage={RyanGosling}
+                        starNumber={5}
+                        nameCostumer="Ryan Gosling"
+                        ocupationCostumer="Motorista"    
+                        />
+                        
+                        <TestimonialCard
+                        comentary="Eu amei o Foozoo! Cada parte é cheia de vida e as apresentações são emocionantes e educativas. O cuidado com os animais é admirável. Um lugar mágico para aprender e se divertir!"
+                        urlProfileImage={Tangerina}
+                        starNumber={4}
+                        nameCostumer="Aaron Taylor"
+                        ocupationCostumer="Advogado"
+                        />
+
+                        <TestimonialCard
+                        comentary="O Foozoo é perfeito para quem busca aventura! As trilhas e experiências com os animais são fantásticas. A adrenalina do arvorismo foi o ponto alto do dia. Recomendo para todos!"
+                        urlProfileImage={BradPitt}
+                        starNumber={5}
+                        nameCostumer="Brad Pitt"
+                        ocupationCostumer="Vendedor de sabonetes"    
+                        />
+
+                        <TestimonialCard
+                        comentary="Como amante da natureza, o Foozoo foi uma grande aula sobre conservação. As iniciativas de preservação são inspiradoras e as palestras educativas são muito informativas. Parabéns à equipe!"
+                        urlProfileImage={AnaDeArmas}
+                        starNumber={5}
+                        nameCostumer="Ana de Armas"
+                        ocupationCostumer="Policial"    
+                        />
+
                 </div>
+                
             </section>
         </section>
+
+        <section id="pricing" className="container">
+            <header>
+                <p className="desktop-only">Ingressos e preços</p>    
+                <h2>Nossos Ingressos</h2>
+            </header>
+
+            <section className="even-columns gap 1.5">
+                <div className="pricing-card">
+                    <span className="ticket">
+                        <h3>Básico</h3>
+                        <p>Para ter uma pequena experiência de nosso zoológico</p>
+
+                    </span><h2>R$ 50,00</h2> <Button text="Comprar agora" secondary key="basic"/>
+                    <span className="hr"/>
+                    <span className="features">
+                        <img src={Check} alt="check" width={24} height={24}/>
+                        <p>Até 2 Pessoas</p>
+                    </span>
+                    <span className="features">
+                        <img src={Check} alt="check" width={24} height={24}/>
+                        <p>Acesso a algumas atrações</p>
+                    </span>
+                </div>
+
+                <div className="pricing-card premium">
+                    <span className="bonus"><p>O MAIS ESCOLHIDO</p></span>
+                    <span className="ticket">
+                        <h3>Familia Basico</h3>
+                        <p>Para ter uma boa experiência	em familia enquanto visita nossas atrações</p>
+                    </span><h2>R$ 90,00</h2> <Button text="Comprar agora" key="premium"/>
+                    <span className="hr"/>
+                    <span className="features">
+                        <img src={Check} alt="check" width={24} height={24}/>
+                        <p>Até 4 Pessoas</p>
+                    </span>
+                    <span className="features">
+                        <img src={Check} alt="check" width={24} height={24}/>
+                        <p>Acesso a x Atrações</p>
+                    </span>
+                </div>
+            </section>
+        </section>            
     </>
 )
 }

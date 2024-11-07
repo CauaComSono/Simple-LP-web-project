@@ -27,14 +27,14 @@
   }
   
   #testimonials header h2 {
-    color: var(--primary-color);
+    color: var(#0000);
     font-weight: var(--fw-bold);
     font-size: 2rem;
   }
   
   #testimonials p {
     color: var(--second-text-color);
-    max-width: 600px;
+    max-width: 2000px;
     font-size: 1rem;
   }
   
@@ -55,10 +55,10 @@
     display: flex;
     gap: 2rem;
     padding-right: 1.5rem;
-    animation: swipe 30000ms linear infinite;
+    animation: swipe 40000ms linear infinite;
   }
   
-  .testimonial-card {
+  .carousel-card {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -72,12 +72,12 @@
     transition: transform 0.3s ease, box-shadow 0.3s ease;
   }
   
-  .testimonial-card:hover {
+  .carousel-card:hover {
     transform: scale(1.05);
     box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
   }
   
-  .testimonial-card > image {
+  .carousel-card > img {
     width: 130px;
     height: 130px;
     border-radius: 50%;
@@ -85,19 +85,19 @@
     border: 3px solid var(--primary-color);
   }
   
-  .testimonial-rating {
+  .rating {
     display: flex;
     gap: 0.25rem;
     color: #ffcc00;
     font-size: 1.5rem;
   }
   
-  .testimonial-name {
+  .names {
     font-size: var(--fs-sm);
     font-weight: var(--fw-bold);
   }
   
-  .testimonial-ocupation {
+  .names p:first-child {
     color: var(--text-color);
     font-size: var(--fs-base);
   }
