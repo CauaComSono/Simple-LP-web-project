@@ -54,7 +54,7 @@
   .carousel-content {
     display: flex;
     gap: 2rem;
-    padding-right: 1.5rem;
+    padding-left: 1.5rem;
     animation: swipe 40000ms linear infinite;
   }
   
@@ -126,7 +126,7 @@
     }
   
     .carousel-card {
-      min-width: 20rem;
-      min-height: 24rem;
+      min-width: 30rem;
+      min-height: 26.875rem;
     }
   }

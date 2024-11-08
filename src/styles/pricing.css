@@ -36,8 +36,13 @@
         }
 
         .features{
-            display: flex;
+            display: grid;
             gap: 1rem;
+
+            li {
+                display: flex;
+                gap: 1rem;
+            }
         }
 
         .ticket{
@@ -46,32 +51,33 @@
             gap: 0.5rem;
         }
 
-        .premium{
-            border: solid 0.2rem var(--primary-color);
-            padding: 0rem 1.5rem 3rem 1.5rem;
+    }
 
-            .ticket > h3{
-                color: var(--primary-color)
-            }
+    .premium{
+        border: solid 0.2rem var(--primary-color);
+        padding: 0rem 1.5rem 3rem 1.5rem;
 
-        .bonus {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background-color: var(--primary-color);
-            width: 65%;
-            height: 2.5rem;
-            align-self: center;
-            border-bottom-left-radius: 1.5rem;
-            border-bottom-right-radius: 1.5rem;
-              
-        p {
-            font-size: 12px;
-            font-weight: var(--fw-md);
-            color: var(--light-text-color);
-            }
-              }
+        .ticket > h3{
+            color: var(--primary-color)
         }
+
+    .bonus {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: var(--primary-color);
+        width: 65%;
+        height: 2.5rem;
+        align-self: center;
+        border-bottom-left-radius: 1.5rem;
+        border-bottom-right-radius: 1.5rem;
+          
+    p {
+        font-size: 12px;
+        font-weight: var(--fw-md);
+        color: var(--light-text-color);
+        }
+          }
     }
 
 

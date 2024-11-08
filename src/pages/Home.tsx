@@ -21,6 +21,7 @@ import "../styles/pricing.css"
 export default function Home() {
 
     const [showMobileMenu, setShowMobileMenu] = useState(false);
+    const [email, setMail] = useState("");
 
     useEffect(() => {
 		const body = document.body;
@@ -39,9 +40,6 @@ export default function Home() {
 		};
 	}, [showMobileMenu]);
 
-    
-
- 
 return (
     
     
@@ -71,7 +69,7 @@ return (
                 <div className="desktop-only">
                     <div className="flex items-center">
                         <a className="reverse-color ml-lg" href="">Login</a>
-                        <Button text="Cadastre-se"/>
+                        <Button func={() => console.log("teste")}text="Cadastre-se"/>
                     </div>
                 </div>
 
@@ -129,9 +127,9 @@ return (
                     Mergulhe em um universo de aventuras naturais com nossa impressionante coleção de animais e habitats. No FOOF, você não apenas observa a vida selvagem, mas participa ativamente da conservação e proteção dessas espécies maravilhosas.
                     </p>
                     <div className="flex gap-1">
-                        <span><Button text="Cadastre-se"/></span>
+                        <span><Button func={() => console.log("teste")} text="Cadastre-se"/></span>
                         <span className="desktop-only">
-                            <Button text="Veja mais" secondary />
+                            <Button func={() => console.log("teste")} text="Veja mais" secondary />
                         </span>
                     </div>
                 </div>
@@ -204,7 +202,6 @@ return (
                         nameCostumer="Ana de Armas"
                         ocupationCostumer="Policial"    
                         />
-
                 </div>
                 <div className="carousel-content">
 
@@ -257,16 +254,18 @@ return (
                         <h3>Básico</h3>
                         <p>Para ter uma pequena experiência de nosso zoológico</p>
 
-                    </span><h2>R$ 50,00</h2> <Button text="Comprar agora" secondary key="basic"/>
+                    </span><h2>R$ 50,00</h2> <Button func={() => console.log("compro")} text="Comprar agora" secondary key="basic"/>
                     <span className="hr"/>
-                    <span className="features">
-                        <img src={Check} alt="check" width={24} height={24}/>
-                        <p>Até 2 Pessoas</p>
-                    </span>
-                    <span className="features">
-                        <img src={Check} alt="check" width={24} height={24}/>
-                        <p>Acesso a algumas atrações</p>
-                    </span>
+                    <ul className="features">
+                        <li>
+                            <img src={Check} alt="check" />
+                            <p>Até duas pessoas</p>
+                        </li>
+                        <li>
+                            <img src={Check} alt="check" />
+                            <p>Acesso a alguams atrações</p>
+                        </li>
+                    </ul>
                 </div>
 
                 <div className="pricing-card premium">
@@ -274,19 +273,46 @@ return (
                     <span className="ticket">
                         <h3>Familia Basico</h3>
                         <p>Para ter uma boa experiência	em familia enquanto visita nossas atrações</p>
-                    </span><h2>R$ 90,00</h2> <Button text="Comprar agora" key="premium"/>
+                    </span><h2>R$ 90,00</h2> <Button func={() => console.log("compro")} text="Comprar agora" key="premium"/>
                     <span className="hr"/>
-                    <span className="features">
+                    <ul className="features">
+                        <li>
                         <img src={Check} alt="check" width={24} height={24}/>
                         <p>Até 4 Pessoas</p>
-                    </span>
-                    <span className="features">
+                        </li>
+                        <li>
                         <img src={Check} alt="check" width={24} height={24}/>
                         <p>Acesso a x Atrações</p>
-                    </span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div className="pricing-card">
+                    <span className="ticket">
+                        <h3>Básico</h3>
+                        <p>Para ter uma pequena experiência de nosso zoológico</p>
+
+                    </span><h2>R$ 50,00</h2> <Button func={() => console.log("compro")} text="Comprar agora" secondary key="basic"/>
+                    <span className="hr"/>
+                    <ul className="features">
+                        <li>
+                            <img src={Check} alt="check" />
+                            <p>Até duas pessoas</p>
+                        </li>
+                        <li>
+                            <img src={Check} alt="check" />
+                            <p>Acesso a alguams atrações</p>
+                        </li>
+                    </ul>
                 </div>
             </section>
-        </section>            
+        </section>   
+
+        <section id="contact">
+            <input type="text" value={email}
+                onChange={event => setMail(event.target.value)}
+            />
+        </section>        
     </>
 )
 }
