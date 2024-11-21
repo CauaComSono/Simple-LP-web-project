@@ -7,7 +7,8 @@ import Check from "../assets/check.svg";
 import Button from "../components/Button";
 import Card from "../components/Card";
 import TestimonialCard from "../components/TestimonialCard";
-import {useEffect, useState } from "react";
+import Footer from "../components/Footer";
+import {FormEvent, useEffect, useState } from "react";
 import HeroRectangleOne from "../assets/images/RectangleOne.png";
 import HeroRectangleTwo from "../assets/images/RectangleTwo.png";
 import RyanGosling from "..//assets/images/RyanGosling.jpg";
@@ -17,11 +18,13 @@ import AnaDeArmas from "../assets/images/AnaArmas.jpg"
 import "../styles/hero.css";
 import "../styles/solution.css"
 import "../styles/pricing.css"
+import ContactForm from "../components/Contact";
+
 
 export default function Home() {
 
     const [showMobileMenu, setShowMobileMenu] = useState(false);
-    const [email, setMail] = useState("");
+
 
     useEffect(() => {
 		const body = document.body;
@@ -202,6 +205,7 @@ return (
                         nameCostumer="Ana de Armas"
                         ocupationCostumer="Policial"    
                         />
+                        
                 </div>
                 <div className="carousel-content">
 
@@ -251,19 +255,19 @@ return (
             <section className="even-columns gap 1.5">
                 <div className="pricing-card">
                     <span className="ticket">
-                        <h3>Básico</h3>
-                        <p>Para ter uma pequena experiência de nosso zoológico</p>
+                        <h3>Básico - Entrada Geral</h3>
+                        <p>Plano ideal para quem quer uma visita simples e rápida, com acesso às atrações principais do zoológico.</p>
 
                     </span><h2>R$ 50,00</h2> <Button func={() => console.log("compro")} text="Comprar agora" secondary key="basic"/>
                     <span className="hr"/>
                     <ul className="features">
                         <li>
                             <img src={Check} alt="check" />
-                            <p>Até duas pessoas</p>
+                            <p>Até 5 Pessoas por grupo</p>
                         </li>
                         <li>
                             <img src={Check} alt="check" />
-                            <p>Acesso a alguams atrações</p>
+                            <p>Acesso às principais áreas e shows do zoológico.</p>
                         </li>
                     </ul>
                 </div>
@@ -271,37 +275,46 @@ return (
                 <div className="pricing-card premium">
                     <span className="bonus"><p>O MAIS ESCOLHIDO</p></span>
                     <span className="ticket">
-                        <h3>Familia Basico</h3>
-                        <p>Para ter uma boa experiência	em familia enquanto visita nossas atrações</p>
-                    </span><h2>R$ 90,00</h2> <Button func={() => console.log("compro")} text="Comprar agora" key="premium"/>
+                        <h3>VIP - Experiência Exclusiva</h3>
+                        <p>Para quem busca uma experiência única e personalizada, com exclusividade e atendimento VIP.</p>
+                    </span>
+                    <span className="price">
+                        <h2>R$ 250,00</h2>
+                        <p>/ pessoa</p>
+                    </span>
+                    <Button func={() => console.log("compro")} text="Comprar agora" key="premium"/>
                     <span className="hr"/>
                     <ul className="features">
                         <li>
                         <img src={Check} alt="check" width={24} height={24}/>
-                        <p>Até 4 Pessoas</p>
+                        <p>Até 2 Pessoas</p>
                         </li>
                         <li>
                         <img src={Check} alt="check" width={24} height={24}/>
-                        <p>Acesso a x Atrações</p>
+                        <p>Acesso exclusivo a bastidores, tour guiado, alimentação gourmet e fotografia profissional.</p>
+                        </li>
+                        <li>
+                        <img src={Check} alt="check" width={24} height={24}/>
+                        <p>Encontro particular com um biólogo ou especialista para tour guiado.</p>
                         </li>
                     </ul>
                 </div>
                 
                 <div className="pricing-card">
                     <span className="ticket">
-                        <h3>Básico</h3>
-                        <p>Para ter uma pequena experiência de nosso zoológico</p>
+                        <h3>Família - Aventura Completa</h3>
+                        <p> Perfeito para famílias, com atividades interativas para crianças e um dia cheio de diversão e aprendizado.</p>
 
-                    </span><h2>R$ 50,00</h2> <Button func={() => console.log("compro")} text="Comprar agora" secondary key="basic"/>
+                    </span><h2>R$ 120,00</h2> <Button func={() => console.log("compro")} text="Comprar agora" secondary key="basic"/>
                     <span className="hr"/>
                     <ul className="features">
                         <li>
                             <img src={Check} alt="check" />
-                            <p>Até duas pessoas</p>
+                            <p>Até 4 pessoas(2 adultos + 2 crianças) </p>
                         </li>
                         <li>
                             <img src={Check} alt="check" />
-                            <p>Acesso a alguams atrações</p>
+                            <p>Acesso completo, atividades educativas e 1 voucher para alimentação.</p>
                         </li>
                     </ul>
                 </div>
@@ -309,10 +322,9 @@ return (
         </section>   
 
         <section id="contact">
-            <input type="text" value={email}
-                onChange={event => setMail(event.target.value)}
-            />
-        </section>        
+        <ContactForm/>
+        </section>
+        <Footer show={true}/>
     </>
 )
 }
